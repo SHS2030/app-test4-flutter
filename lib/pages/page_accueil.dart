@@ -36,12 +36,12 @@ class _PageAccueilState extends State<PageAccueil> {
       appBar: AppBar(
         foregroundColor: Theme.of(context).appBarTheme.foregroundColor,
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
-        title: Text("Page Accueil"),
+        title: Text("Accueil"),
       ),
       body: Center(
         child: SafeArea(
           child: ListView.separated(
-            itemCount:  data!.length,
+            itemCount: data!.length,
             itemBuilder: (context, index) {
               return ListTile(
                 onTap: () {
@@ -52,8 +52,9 @@ class _PageAccueilState extends State<PageAccueil> {
                       "id": data![index]["id"],
                       "name": data![index]["name"],
                       "email": data![index]["email"],
-                      "imageurl": "https://i.pravatar.cc/150?u=${data![index]["id"]}",
-                      },
+                      "imageurl":
+                          "https://i.pravatar.cc/150?u=${data![index]["id"]}",
+                    },
                   );
                 },
                 leading: Hero(
